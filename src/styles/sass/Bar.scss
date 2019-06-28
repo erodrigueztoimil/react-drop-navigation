@@ -1,0 +1,49 @@
+.bar {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  .header {
+    h3 {
+      margin: 0;
+      font-size: 30px;
+    }
+  }
+  .divider {
+    flex: 1;
+  }
+  .parent {
+    .links {
+      ul {
+        li {
+          display: inline;
+          padding: 0 20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+// mobile
+@media (max-width:770px) {
+  .bar {
+    padding: 35px;
+    .parent {
+      .links {
+        display: none;
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width:770px) {
+  .bar {
+    padding: 35px 50px;
+    .parent {
+      .button {
+        display: none;
+      }
+    }
+  }
+}
